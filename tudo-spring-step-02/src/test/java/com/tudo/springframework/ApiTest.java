@@ -30,4 +30,23 @@ public class ApiTest {
         UserService userService_singleton = (UserService) beanFactory.getSingleton("userService");
         userService_singleton.queryUserInfo();
     }
+
+    /**
+     * 功能描述: 验证有参数构造函数初始化异常<br>
+     *
+     * @return: void
+     * @since: 1.0.0
+     * @author: lvkj@tsintergy.com
+     * @date: 2021/12/28 1:45 下午
+     */
+    @Test
+    public void test_BeanFactoryStudent() {
+        //1、初始化BeanFactory
+        DefaultListableBeanFactory beanFactory = new DefaultListableBeanFactory();
+        //2、注册bean
+        BeanDefinition beanDefinition = new BeanDefinition(StudentService.class);
+        beanFactory.registerBeanDefinition("studentService", beanDefinition);
+        //3、第一次获取bean
+        StudentService studentService = (StudentService) beanFactory.getBean("studentService");
+    }
 }
