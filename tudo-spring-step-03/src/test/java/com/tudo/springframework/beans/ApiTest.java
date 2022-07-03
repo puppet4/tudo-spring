@@ -3,8 +3,8 @@
  */
 package com.tudo.springframework.beans;
 
-import com.tudo.springframework.beans.factory.config.BeanDefinition;
-import com.tudo.springframework.beans.factory.support.DefaultListableBeanFactory;
+import com.tudo.springframework.beans.config.BeanDefinition;
+import com.tudo.springframework.beans.support.DefaultListableBeanFactory;
 import org.junit.Test;
 
 /**
